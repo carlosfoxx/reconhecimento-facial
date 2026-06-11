@@ -15,7 +15,7 @@ PASTA_FOTOS = os.path.join(PASTA_DADOS, "fotos")
 class App(ctk.CTk):
     def __init__(self):
         super().__init__()
-        self.title("Reconhecimento Facial")
+        self.title("Poisson - Reconhecimento Facial")
         self.geometry("960x600")
         self.minsize(800, 500)
 
@@ -48,7 +48,7 @@ class App(ctk.CTk):
         frame_direito.grid(row=0, column=1, sticky="nsew", padx=10, pady=10)
         frame_direito.grid_columnconfigure(0, weight=1)
 
-        ctk.CTkLabel(frame_direito, text="Reconhecimento Facial", font=("Arial", 18, "bold")).pack(pady=(15, 5))
+        ctk.CTkLabel(frame_direito, text="Poisson - Reconhecimento Facial", font=("Arial", 18, "bold")).pack(pady=(15, 5))
 
         self.btn_cadastrar = ctk.CTkButton(frame_direito, text="Cadastrar Pessoa", command=self.abrir_cadastro)
         self.btn_cadastrar.pack(pady=5, padx=10, fill="x")
@@ -59,7 +59,7 @@ class App(ctk.CTk):
         self.btn_parar = ctk.CTkButton(frame_direito, text="Parar", command=self.parar, state="disabled", fg_color="gray")
         self.btn_parar.pack(pady=5, padx=10, fill="x")
 
-        self.btn_limpar = ctk.CTkButton(frame_direito, text="Limpar Dados", command=self.limpar_dados, fg_color="darkred", hover_color="red")
+        self.btn_limpar = ctk.CTkButton(frame_direito, text="Limpar Dados (Apaga Tudo)", command=self.limpar_dados, fg_color="darkred", hover_color="red")
         self.btn_limpar.pack(pady=5, padx=10, fill="x")
 
         ctk.CTkLabel(frame_direito, text="--- Cadastrados ---", font=("Arial", 12, "bold")).pack(pady=(15, 5))
